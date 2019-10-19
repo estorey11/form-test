@@ -6,13 +6,13 @@ const FormNav = (props) => {
     <div>
       <Nav>
         <NavItem>
-          <Button >Skills</Button>
+          <Button onClick={props.handleTabClick} name="skills">Skills</Button>
         </NavItem>
         <NavItem>
-          <Button >Equipment</Button>
+          <Button onClick={props.handleTabClick} name="equip">Equipment</Button>
         </NavItem>
         <NavItem>
-          <Button >Certification</Button>
+          <Button onClick={props.handleTabClick} name="cert">Certification</Button>
         </NavItem>
       </Nav>
     </div>
