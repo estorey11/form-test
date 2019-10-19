@@ -1,5 +1,6 @@
 import React from 'react'
 import TestContactForm from './TestContactForm'
+import FormNav from './FormNav'
 
 class SkillsEquipContainer extends React.Component {
   submit = values => {
@@ -7,7 +8,12 @@ class SkillsEquipContainer extends React.Component {
     console.log(values)
   }
   render() {
-    return <TestContactForm onSubmit={this.submit} />
+    return (
+      <div>
+        <FormNav />
+        <TestContactForm onSubmit={this.submit} />
+      </div>
+    )
   }
 }
 
