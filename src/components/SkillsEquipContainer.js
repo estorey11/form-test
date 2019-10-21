@@ -23,7 +23,7 @@ class SkillsEquipContainer extends React.Component {
         return <SkillForm onSubmit={this.submit}/>
       case 'equip':
         return <EquipForm onSubmit={this.submit}/>
-      case 'cert':
+      case 'certs':
         return <CertForm onSubmit={this.submit}/>
       default:
         return <SkillForm onSubmit={this.submit}/>
@@ -32,14 +32,14 @@ class SkillsEquipContainer extends React.Component {
 
   handleTabClick=event=>{
     this.setState({
-      form: event.target.name
+      form: event.target.value
     })
   }
 
   render() {
     return (
       <div>
-        <FormNav handleTabClick={this.handleTabClick}/>
+        <FormNav form={this.state.form} handleTabClick={this.handleTabClick}/>
         {this.renderForm()}
       </div>
     )

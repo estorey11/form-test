@@ -7,13 +7,22 @@ const FormNav = (props) => {
     <div>
       <Nav id='formNav'>
         <NavItem id='nav1'>
-          <button class='navButton' onClick={props.handleTabClick} name="skills">Skills</button>
+          <label>
+            <input type="radio" value="skills" checked={props.form === 'skills'} onChange={props.handleTabClick} />
+            Skills
+          </label>
         </NavItem>
         <NavItem id='nav2'>
-          <button class='navButton' onClick={props.handleTabClick} name="equip">Equipment</button>
+          <label>
+            <input type="radio" value="equip" checked={props.form === 'equip'} onChange={props.handleTabClick} />
+            Equipment
+          </label>
         </NavItem>
         <NavItem id='nav3'>
-          <button class='navButton' onClick={props.handleTabClick} name="cert">Certifications</button>
+          <label>
+            <input type="radio" value="certs" checked={props.form === 'certs'} onChange={props.handleTabClick}/>
+            Certifications
+          </label>
         </NavItem>
       </Nav>
     </div>
