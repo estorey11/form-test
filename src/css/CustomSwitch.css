@@ -3,7 +3,7 @@
   position: relative;
   display: inline-block;
   width: 108px;
-  height: 30px;
+  height: 26px;
   box-shadow: inset 0px 1.5px 3px #605F5F;
   border-radius: 3px;
 
@@ -20,7 +20,7 @@
 .slider {
   position: absolute;
   cursor: pointer;
-  top: 0;
+  top: -3px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -35,7 +35,7 @@
 .slider:before {
   position: absolute;
   content: "";
-  height: 30px;
+  height: 31px;
   width: 55px;
   left: 0px;
   background-image: url('../images/lines.svg');

@@ -12,16 +12,27 @@
 
 label {
   width: 138px;
-  height: 30px;
-  left: 20px;
+  height: 20px;
+  margin-left: 20px;
+  margin-top: 15px;
+  margin-bottom: 0px;
+  float: left;
+  text-align: left;
 
-  font-family: Montserrat;
+  font-family: Montserrat-SemiBold;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;
   display: flex;
-  align-items: center;
+
 
   color: #232323;
+}
+
+.switch {
+  margin-bottom: 0px;
+  margin-top: 9px;
+  margin-right: 20px;
+  float: right;
 }

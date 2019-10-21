@@ -7,7 +7,7 @@ import rootReducer from './reducers/rootReducer'
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './fonts/Montserrat-Regular.ttf'
+import './fonts/Montserrat-SemiBold.ttf'
 
 
 const store = createStore(
