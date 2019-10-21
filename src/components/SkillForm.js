@@ -1,11 +1,13 @@
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
 import { Button } from 'reactstrap';
+import CustomSwitch from './CustomSwitch'
 
 let SkillForm = props => {
   const { handleSubmit } = props
   return (
     <form onSubmit={handleSubmit}>
+      <CustomSwitch />
       <div>
         <label htmlFor="firstName">Skills</label>
         <Field name="firstName" component="input" type="text" />

@@ -9,19 +9,10 @@ const CustomSwitch = (props) => {
 
   return (
     <div>
-      <Navbar style={barStyle}>
-          <img style={logoStyle} src={Logo}/>
-
-          <img  style={menuStyle} src={Menu}/>
-
-        <Collapse isOpen={!collapsed} navbar>
-          <Nav navbar>
-            <NavItem>
-              <NavLink href="/">Home</NavLink>
-            </NavItem>
-          </Nav>
-        </Collapse>
-      </Navbar>
+      <label class="switch">
+        <input type="checkbox" />
+        <span class="slider"></span>
+      </label>
     </div>
   );
 }
