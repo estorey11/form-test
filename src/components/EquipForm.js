@@ -1,6 +1,8 @@
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
 import { Button } from 'reactstrap';
+import CustomSwitch from './CustomSwitch'
+//import '../css/EquipForm.css';
 
 let EquipForm = props => {
   const { handleSubmit } = props
