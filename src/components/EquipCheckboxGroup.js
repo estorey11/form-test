@@ -25,7 +25,7 @@ class EquipCheckboxGroup extends React.Component {
 
                                return input.onChange(newValue);
                            }}/>
-                    <span class="slider"></span>
+                         <span className="slider"></span>
                 </label>
             </div>)
         });

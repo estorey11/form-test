@@ -10,7 +10,7 @@ class SkillCheckboxGroup extends React.Component {
             return (
             <div className="check_row" key={index}>
               <label>{option.name}</label>
-                <label class="switch">
+                <label className="switch">
                     <input type="checkbox"
                            name={`${input.name}[${index}]`}
                            value={option.name}
@@ -25,7 +25,7 @@ class SkillCheckboxGroup extends React.Component {
 
                                return input.onChange(newValue);
                            }}/>
-                    <span class="slider"></span>
+                         <span className="slider"></span>
                 </label>
             </div>)
         });

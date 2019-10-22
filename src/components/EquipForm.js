@@ -36,9 +36,9 @@ let EquipForm = props => {
   const renderEquipForms=function(){
     return props.knownSkills.map((skill, index)=>{
       return(
-        <div className="equipForm" id={index}>
-          <div className="labelDiv" id={index} >
-            <label className='itemsLabel' id={index} >{skill} Items</label>
+        <div className="equipForm" key={index}>
+          <div className="labelDiv" key={index} >
+            <label className='itemsLabel' key={index} >{skill} Items</label>
           </div>
             <Field name={skill}
                   component={EquipCheckboxGroup}
