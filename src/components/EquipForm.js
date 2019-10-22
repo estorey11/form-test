@@ -1,6 +1,5 @@
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
-import CustomSwitch from './CustomSwitch'
 import '../css/EquipForm.css';
 import EquipCheckboxGroup from './EquipCheckboxGroup'
 import EquipFormText from './EquipFormText'

@@ -4,7 +4,7 @@ import '../css/CustomSwitch.css';
 class SkillCheckboxGroup extends React.Component {
 
     skillCheckboxGroup() {
-        let {label, required, options, input, meta} = this.props;
+        let {label, options, input } = this.props;
 
         return options.map((option, index) => {
             return (

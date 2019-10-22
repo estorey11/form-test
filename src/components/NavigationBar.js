@@ -26,7 +26,7 @@ const menuStyle = {
 
 
 const NavigationBar = (props) => {
-  const [collapsed, setCollapsed] = useState(true);
+  const [collapsed] = useState(true);
 
 
   return (

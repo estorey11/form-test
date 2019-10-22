@@ -4,7 +4,7 @@ import '../css/CustomSwitch.css';
 class EquipCheckboxGroup extends React.Component {
 
     equipCheckboxGroup() {
-        let {label, required, options, input, meta} = this.props;
+        let { label, options, input } = this.props;
 
         return options.map((option, index) => {
             return (
