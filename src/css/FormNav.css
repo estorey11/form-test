@@ -45,6 +45,7 @@ input {
   cursor: pointer;
 }
 
+
 input:checked + label {
   border-bottom: 2px solid #2C7DFA;
   opacity: 1;
