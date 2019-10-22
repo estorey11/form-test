@@ -1,16 +1,16 @@
 import React from 'react';
 import '../css/CustomSwitch.css';
 
-class SkillCheckboxGroup extends React.Component {
+class EquipCheckboxGroup extends React.Component {
 
-    skillCheckboxGroup() {
+    equipCheckboxGroup() {
         let {label, required, options, input, meta} = this.props;
 
         return options.map((option, index) => {
             return (
-            <div className="check_row" key={index}>
-              <label>{option.name}</label>
-                <label class="switch">
+            <div className={"check_row"+index%2} key={index}>
+              <label className='equipOptionLabel' >{option.name}</label>
+                <label className='switch equipSwitch'>
                     <input type="checkbox"
                            name={`${input.name}[${index}]`}
                            value={option.name}
@@ -34,11 +34,11 @@ class SkillCheckboxGroup extends React.Component {
     render() {
         return (
             <div>
-                {this.skillCheckboxGroup()}
+                {this.equipCheckboxGroup()}
             </div>
         )
     }
 }
 
 
-export default SkillCheckboxGroup;
+export default EquipCheckboxGroup;

@@ -26,9 +26,9 @@ class SkillsEquipContainer extends React.Component {
         return <SkillForm initialValues={this.props.skills} onSubmit={this.submit}/>
       case 'equip':
         if ((this.props.knownSkills.length > 0)) {
-          return <EquipForm onSubmit={this.submit}/>
+          return <EquipForm knownSkills={this.props.knownSkills} onSubmit={this.submit}/>
         }
-        return <img style={{marginTop: '49px'}} src={no_skills_text}/>
+        return <img style={{marginTop: '49px', paddingBottom: '520px'}} src={no_skills_text}/>
       case 'certs':
         return <CertForm onSubmit={this.submit}/>
       default:

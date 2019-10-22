@@ -8,7 +8,11 @@ import SkillCheckboxGroup from './SkillCheckboxGroup'
 
 let SkillForm = props => {
   const { handleSubmit } = props
-  let optionsList = [{id: 1, name: 'Warehouse'}, {id: 2, name: 'Hospitality'}, {id: 3, name: 'General Labor'}, {id: 4, name: 'Office'}, {id: 5, name: 'iRelaunch'} ]
+  let optionsList = [{id: 1, name: 'Warehouse'},
+                      {id: 2, name: 'Hospitality'},
+                      {id: 3, name: 'General Labor'},
+                      {id: 4, name: 'Office'},
+                      {id: 5, name: 'iRelaunch'} ]
 
   return (
     <form onSubmit={handleSubmit}>
