@@ -4,7 +4,7 @@ import { Button } from 'reactstrap';
 import CustomSwitch from './CustomSwitch'
 import SkillImage from './SkillImage'
 import '../css/SkillForm.css';
-import CheckboxGroup from './CheckboxGroup'
+import SkillCheckboxGroup from './SkillCheckboxGroup'
 
 let SkillForm = props => {
   const { handleSubmit } = props
@@ -13,7 +13,7 @@ let SkillForm = props => {
   return (
     <form onSubmit={handleSubmit}>
       <SkillImage />
-      <Field name="skills" component={CheckboxGroup} options={optionsList} />
+      <Field name="knownSkills" component={SkillCheckboxGroup} options={optionsList} />
     </form>
   )
 }

@@ -5,6 +5,8 @@ import SkillForm from './SkillForm'
 import CertForm from './CertForm'
 import EquipForm from './EquipForm'
 import { connect } from 'react-redux'
+import no_skills_text from '../images/no_skills_text.svg'
+
 
 class SkillsEquipContainer extends React.Component {
 
@@ -23,10 +25,10 @@ class SkillsEquipContainer extends React.Component {
       case 'skills':
         return <SkillForm initialValues={this.props.skills} onSubmit={this.submit}/>
       case 'equip':
-        if (anyTrue(this.props.skills)) {
+        if ((this.props.knownSkills.length > 0)) {
           return <EquipForm onSubmit={this.submit}/>
         }
-        return <div>Nope</div>
+        return <img style={{marginTop: '49px'}} src={no_skills_text}/>
       case 'certs':
         return <CertForm onSubmit={this.submit}/>
       default:
@@ -52,18 +54,10 @@ class SkillsEquipContainer extends React.Component {
 
 const mapStateToProps=(state) =>{
 
-  if (state.form.skills) {
-    return { skills: state.form.skills.values }
+  if (state.form.skills && state.form.skills.values) {
+    return { knownSkills: state.form.skills.values.knownSkills }
   }
-  return { skills: {} }
+  return { knownSkills: [] }
 }
 
 export default connect(mapStateToProps)(SkillsEquipContainer);
-
-const anyTrue=(obj)=>{
-
-   for(let o in obj)
-       if(obj[o]) return true;
-
-   return false;
- }

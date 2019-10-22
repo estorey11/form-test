@@ -1,9 +1,9 @@
 import React from 'react';
 import '../css/CustomSwitch.css';
 
-class CheckboxGroup extends React.Component {
+class SkillCheckboxGroup extends React.Component {
 
-    checkboxGroup() {
+    SkillCheckboxGroup() {
         let {label, required, options, input, meta} = this.props;
 
         return options.map((option, index) => {
@@ -34,11 +34,11 @@ class CheckboxGroup extends React.Component {
     render() {
         return (
             <div>
-                {this.checkboxGroup()}
+                {this.SkillCheckboxGroup()}
             </div>
         )
     }
 }
 
 
-export default CheckboxGroup;
+export default SkillCheckboxGroup;
