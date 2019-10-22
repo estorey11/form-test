@@ -4,33 +4,16 @@ import { Button } from 'reactstrap';
 import CustomSwitch from './CustomSwitch'
 import SkillImage from './SkillImage'
 import '../css/SkillForm.css';
-
+import CheckboxGroup from './CheckboxGroup'
 
 let SkillForm = props => {
   const { handleSubmit } = props
+  let optionsList = [{id: 1, name: 'Warehouse'}, {id: 2, name: 'Hospitality'}, {id: 3, name: 'General Labor'}, {id: 4, name: 'Office'}, {id: 5, name: 'iRelaunch'} ]
+
   return (
     <form onSubmit={handleSubmit}>
       <SkillImage />
-      <div class="check_row">
-        <label htmlFor="warehouse">Warehouse</label>
-        <Field name="warehouse" class="switch" component={CustomSwitch}/>
-      </div>
-      <div class="check_row">
-        <label htmlFor="hospitality">Hospitality</label>
-        <Field name="hospitality" class="switch" component={CustomSwitch}/>
-      </div>
-      <div class="check_row">
-        <label htmlFor="generalLabor">General Labor</label>
-        <Field name="generalLabor" class="switch" component={CustomSwitch}/>
-      </div>
-      <div class="check_row">
-        <label htmlFor="office">Office</label>
-        <Field name="office" class="switch" component={CustomSwitch}/>
-      </div>
-      <div class="check_row">
-        <label htmlFor="iRelaunch">iRelaunch</label>
-        <Field name="iRelaunch" class="switch" component={CustomSwitch}/>
-      </div>
+      <Field name="skills" component={CheckboxGroup} options={optionsList} />
     </form>
   )
 }

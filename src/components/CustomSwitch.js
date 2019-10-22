@@ -10,7 +10,8 @@ class CustomSwitch extends React.Component {
     return (
       <>
         <label class="switch">
-          <input type="checkbox" value={this.props.value} onClick={() => onChange(!value)}/>
+          <input type="checkbox"
+            onChange={() => onChange(!value)}/>
           <span class="slider"></span>
         </label>
       </>
