@@ -16,9 +16,9 @@ const SkillImage = (props) => {
 
   return (
     <div>
-      <img style={style} src={skillImage}/>
+      <img style={style} src={skillImage} alt='skills header'/>
       <div>
-        <img style={textStyle} src={skillText}/>
+        <img style={textStyle} src={skillText} alt='here you can select your interests and experiences'/>
       </div>
     </div>
   );

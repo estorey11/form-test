@@ -1,5 +1,4 @@
 import React from 'react'
-import TestContactForm from './TestContactForm'
 import FormNav from './FormNav'
 import SkillForm from './SkillForm'
 import CertForm from './CertForm'
@@ -28,7 +27,7 @@ class SkillsEquipContainer extends React.Component {
         if ((this.props.knownSkills.length > 0)) {
           return <EquipForm knownSkills={this.props.knownSkills} onSubmit={this.submit}/>
         }
-        return <img style={{marginTop: '49px', paddingBottom: '520px'}} src={no_skills_text}/>
+        return <img alt='You currently have no skills  to add equipment under. Please go back to the Skills tab to add some of your skills  and interests' style={{marginTop: '49px', paddingBottom: '520px'}} src={no_skills_text}/>
       case 'certs':
         return <CertForm onSubmit={this.submit}/>
       default:

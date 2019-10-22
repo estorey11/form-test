@@ -16,7 +16,7 @@ const EquipFormText = (props) => {
 
   return (
     <div style={divStyle}>
-      <img style={textStyle} src={equip_text}/>
+      <img style={textStyle} src={equip_text} alt='Do you have any of the following equipment for your selections?'/>
     </div>
   );
 }

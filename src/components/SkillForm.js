@@ -1,7 +1,5 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Field, reduxForm } from 'redux-form'
-import { Button } from 'reactstrap';
-import CustomSwitch from './CustomSwitch'
 import SkillImage from './SkillImage'
 import '../css/SkillForm.css';
 import SkillCheckboxGroup from './SkillCheckboxGroup'

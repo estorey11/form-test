@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../css/NavigationBar.css';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+import { Collapse, Navbar, Nav, NavItem, NavLink } from 'reactstrap';
 import Logo from '../images/laborocity_logo_main.svg'
 import Menu from '../images/menu.svg'
 
@@ -28,14 +28,13 @@ const menuStyle = {
 const NavigationBar = (props) => {
   const [collapsed, setCollapsed] = useState(true);
 
-  const toggleNavbar = () => setCollapsed(!collapsed);
 
   return (
     <div>
       <Navbar style={barStyle}>
-          <img style={logoStyle} src={Logo}/>
+          <img alt='laborocity logo' style={logoStyle} src={Logo}/>
 
-          <img  style={menuStyle} src={Menu}/>
+          <img  alt='menu' style={menuStyle} src={Menu}/>
 
         <Collapse isOpen={!collapsed} navbar>
           <Nav navbar>

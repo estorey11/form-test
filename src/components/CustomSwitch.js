@@ -1,6 +1,6 @@
 
 import '../css/CustomSwitch.css';
-import React, { Component } from 'react'
+import React from 'react'
 
 class CustomSwitch extends React.Component {
   render() {
