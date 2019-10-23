@@ -24,7 +24,7 @@ class SkillCheckboxGroup extends React.Component {
                 <div className='specialtyLabels'>
                   <SpecialtyCheckbox checked={props.input.value > 0} />
                   <label className='specialtyName'>{specialty}</label>
-                  <label className='specialtyExperience'>My Experience: {props.input.value} Years</label>
+                  <label className='specialtyExperience'>My Experience: {props.input.value || 0} Years</label>
                 </div>
                 <div className='sliderDiv'>
                 <Slider

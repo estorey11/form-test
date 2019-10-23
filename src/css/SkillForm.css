@@ -27,7 +27,9 @@
   line-height: 15px;
   float: left;
   width: 108px;
-  margin: 0px;
+  margin-top: 2px;
+  margin-bottom: 0px;
+  margin-left: 10px;
 }
 
 .specialtyExperience{
@@ -35,7 +37,10 @@
   line-height: 13px;
   color: #787878;
   float: right;
-  margin: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 3px;
 }
 
 .sliderDiv{
