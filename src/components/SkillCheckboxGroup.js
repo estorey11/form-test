@@ -5,7 +5,7 @@ import { Field, reduxForm } from 'redux-form'
 import 'rc-slider/assets/index.css';
 import 'rc-tooltip/assets/bootstrap.css';
 import SliderHandle from './SliderHandle';
-
+import SpecialtyCheckbox from './SpecialtyCheckbox'
 
 
 class SkillCheckboxGroup extends React.Component {
@@ -22,6 +22,7 @@ class SkillCheckboxGroup extends React.Component {
             component={(props,input, onChange, onAfterChange) =>
               <>
                 <div className='specialtyLabels'>
+                  <SpecialtyCheckbox checked={props.input.value > 0} />
                   <label className='specialtyName'>{specialty}</label>
                   <label className='specialtyExperience'>My Experience: {props.input.value} Years</label>
                 </div>
