@@ -1,13 +1,38 @@
 import React from 'react';
 import '../css/CustomSwitch.css';
+import Slider, { Handle }  from "rc-slider";
+import { Field, reduxForm } from 'redux-form'
+import 'rc-slider/assets/index.css';
+import 'rc-tooltip/assets/bootstrap.css';
+import SliderHandle from './SliderHandle';
+
+
 
 class SkillCheckboxGroup extends React.Component {
+
 
 
     skillSpecialtyGroup(specialties){
       return specialties.map((specialty, index)=>{
         return(
-          <div className="specialtyRow" key={index}>{specialty}</div>
+          <div className="specialtyRow" key={index}>
+
+
+            <Slider min={0}
+                    max={10}
+                    railStyle={{ backgroundColor: '#6A6A6A', height: 5 }}
+                    handle={ (handleProps) => {
+                        return (
+                            <Handle { ...handleProps }>
+                                <SliderHandle />
+                            </Handle>
+                        )
+                    }}
+                    trackStyle={{ backgroundColor: '#468DFB', height: 5 }}
+            />
+
+
+          </div>
         )
       })
     }
