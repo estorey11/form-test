@@ -11,7 +11,7 @@ const SliderHandle = (props) => {
         style={{
           position: 'relative',
           bottom: '8px',
-          right: '10px'
+          right: '14px'
         }}
          />
   );
