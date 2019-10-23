@@ -12,25 +12,41 @@ class SkillCheckboxGroup extends React.Component {
 
 
 
-    skillSpecialtyGroup(specialties){
-      return specialties.map((specialty, index)=>{
+    skillSpecialtyGroup(option){
+      return option.specialties.map((specialty, index)=>{
         return(
           <div className="specialtyRow" key={index}>
 
+          <Field
+            name={`${option.name}.${specialty}`}
+            component={(props,input, onChange, onAfterChange) =>
+              <>
+                <div className='specialtyLabels'>
+                  <label className='specialtyName'>{specialty}</label>
+                  <label className='specialtyExperience'>My Experience: {props.input.value} Years</label>
+                </div>
+                <div className='sliderDiv'>
+                <Slider
+                        value= {props.input.value}
+                        onChange={props.input.onChange}
+                        {...props}
+                        min={0}
+                        max={10}
+                        handleStyle={{height: 1, width: 1}}
+                        railStyle={{ backgroundColor: '#6A6A6A', height: 5 }}
+                        handle={ (handleProps) => {
+                            return (
+                                <Handle { ...handleProps }>
+                                    <SliderHandle />
+                                </Handle>
+                            )
+                        }}
+                        trackStyle={{ backgroundColor: '#468DFB', height: 5 }}
 
-            <Slider min={0}
-                    max={10}
-                    railStyle={{ backgroundColor: '#6A6A6A', height: 5 }}
-                    handle={ (handleProps) => {
-                        return (
-                            <Handle { ...handleProps }>
-                                <SliderHandle />
-                            </Handle>
-                        )
-                    }}
-                    trackStyle={{ backgroundColor: '#468DFB', height: 5 }}
+                />
+                </div>
+              </>}
             />
-
 
           </div>
         )
@@ -64,7 +80,7 @@ class SkillCheckboxGroup extends React.Component {
                     </label>
                 </div>
 
-                {input.value.indexOf(option.name) !== -1 ? this.skillSpecialtyGroup(option.specialties): <></>}
+                {input.value.indexOf(option.name) !== -1 ? this.skillSpecialtyGroup(option): <></>}
 
 
               </>

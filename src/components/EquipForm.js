@@ -12,7 +12,7 @@ let EquipForm = props => {
       "General Labor": [
           {id: 1, name: 'Steel Toed Boots'},
           {id: 2, name: 'Hard Hat'},
-          {id: 3, name: 'Safetey Vest'},
+          {id: 3, name: 'Safety Vest'},
           {id: 4, name: 'Eye Protection'},
           {id: 5, name: 'Gloves'}],
       "Warehouse": [
