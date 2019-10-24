@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../css/CustomSwitch.css';
 import Slider, { Handle }  from "rc-slider";
 import { Field, reduxForm } from 'redux-form'
@@ -6,9 +6,11 @@ import 'rc-slider/assets/index.css';
 import 'rc-tooltip/assets/bootstrap.css';
 import SliderHandle from './SliderHandle';
 import SpecialtyCheckbox from './SpecialtyCheckbox'
+import { Collapse } from 'reactstrap';
 
 
 class SkillCheckboxGroup extends React.Component {
+
 
 
 
@@ -54,8 +56,11 @@ class SkillCheckboxGroup extends React.Component {
       })
     }
 
+
+
     skillCheckboxGroup() {
         let {label, options, input } = this.props;
+
 
         return options.map((option, index) => {
             return (
@@ -81,7 +86,11 @@ class SkillCheckboxGroup extends React.Component {
                     </label>
                 </div>
 
-                {input.value.indexOf(option.name) !== -1 ? this.skillSpecialtyGroup(option): <></>}
+
+                <Collapse isOpen={input.value.indexOf(option.name) !== -1 }>
+                      {this.skillSpecialtyGroup(option)}
+                </Collapse>
+
 
 
               </>
