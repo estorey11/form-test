@@ -9,9 +9,15 @@ import SpecialtyCheckbox from './SpecialtyCheckbox'
 import { Collapse } from 'reactstrap';
 
 
+
 class SkillCheckboxGroup extends React.Component {
 
-
+    getExperienceText(years){
+      if (years< 10) {
+        return years;
+      }
+      return `${years}+`
+    }
 
 
     skillSpecialtyGroup(option){
@@ -26,7 +32,11 @@ class SkillCheckboxGroup extends React.Component {
                 <div className='specialtyLabels'>
                   <SpecialtyCheckbox checked={props.input.value > 0} />
                   <label className='specialtyName'>{specialty}</label>
-                  <label className='specialtyExperience'>My Experience: {props.input.value || 0} Years</label>
+                  <label className='yearValue'>
+                      {this.getExperienceText(props.input.value) || 0} Years
+                  </label>
+                  <label className='specialtyExperience'>My Experience:</label>
+
                 </div>
                 <div className='sliderDiv'>
                 <Slider

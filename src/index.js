@@ -8,6 +8,8 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './fonts/Montserrat-SemiBold.ttf'
+import './fonts/Montserrat-Regular.ttf'
+import './fonts/Montserrat-Medium.ttf'
 
 
 const store = createStore(
