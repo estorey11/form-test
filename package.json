@@ -4,9 +4,11 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^4.3.1",
+    "d3-ease": "^1.0.5",
     "rc-slider": "^8.7.1",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
+    "react-move": "^6.0.0",
     "react-redux": "^5.0.7",
     "react-scripts": "3.2.0",
     "reactstrap": "^8.1.1",

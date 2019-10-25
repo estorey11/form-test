@@ -1,10 +1,11 @@
 import React from 'react';
 import { Nav, NavItem } from 'reactstrap';
 import '../css/FormNav.css';
+import BlueBar from './BlueBar'
 
 const FormNav = (props) => {
   return (
-    <div>
+    <div id='formNavDiv'>
       <Nav id='formNav'>
         <NavItem id='nav1'>
             <div className='textPad'></div>
@@ -28,7 +29,11 @@ const FormNav = (props) => {
             Certifications
           </label>
         </NavItem>
+
       </Nav>
+      <div className='navSlider' >
+        <BlueBar form={props.form}/>
+      </div>
     </div>
   );
 }

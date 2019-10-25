@@ -13,8 +13,12 @@
 
 #formNav{
   background: #F5F5F5;
+
+  height: 50px;
+}
+
+#formNavDiv{
   border-bottom: 2px solid #E0E0E0;
-  height: 52px;
 }
 
 .textPad{
@@ -47,6 +51,9 @@ input {
 
 
 input:checked + label {
-  border-bottom: 2px solid #2C7DFA;
   opacity: 1;
+}
+
+.navSlider {
+  height: 2px;
 }

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import '../css/NavigationBar.css';
 import { Collapse, Navbar, Nav, NavItem, NavLink } from 'reactstrap';
 import Logo from '../images/laborocity_logo_main.svg'
 import Menu from '../images/menu.svg'
